@@ -76,6 +76,7 @@ $ git commit -m "Added hello.txt"
 // TODO: Definitely record this via tee
 
 /*
+// TODO: As per notes, consider using joke name generator
 mkdir hai-node-summit
 cd hai-node-summit
 git init
@@ -89,5 +90,30 @@ grunt-init node
 
 // TODO: If internet sucks, show GIF
 // TODO: Prepare a damn GIF (I think we have leftover for this one)
+
+// TODO: Not really slides are much as steps...
+// TODO: Technically, git init, hub create, and grunt-init node are separate steps
+// but the same category?
+
+// ## NEXT STEP
+
+// Live coding =D
+
+// Rewrite lib to calculator
+/*
+function Calculator() {
+  this.total = 0;
+}
+Calculator.prototype = {
+  add: function (num) {
+    this.total += num;
+  }
+};
+module.exports = Calculator;
+*/
+
+// Start running the tests consistently via `nodemon`
+// Make note about alternatives: `mocha --watch`, `listen-spawn`,
+// `guard` (ruby), `watcher` (go), `entr` (c), `watchman` (php)
 
 // At the end, print EOF.
