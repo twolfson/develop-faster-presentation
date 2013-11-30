@@ -1,0 +1,44 @@
+{
+  "name": "develop-faster-presentation",
+  "description": "Presentation on removing the tedium from creating, developing, and publishing repos.",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://bitbucket.org/twolfson/develop-faster-presentation.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "UNLICENSE",
+      "url": "/blob/master/UNLICENSE"
+    }
+  ],
+  "main": "lib/develop-faster-presentation",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "echo 'No tests =(' && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.4.0"
+  },
+  "keywords": [
+    "develop",
+    "faster",
+    "repos",
+    "publish"
+  ],
+  "private": true
+}
