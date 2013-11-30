@@ -22,6 +22,9 @@ github/twolfson -- @twolfson -- http://twolfson.com/
 // TODO: Figure out graphic here... Maybe colored block quote
 // although that would be premature for half of the slide
 // Maybe put up
+
+// TODO: Generate these outputs via tee (legit outputs)
+
 /*
 ```
 $ gco dev/hai
@@ -39,6 +42,9 @@ $ echo "Hello World!" > hello.txt
 $ git commit -m "Added hello.txt"
 ```
 */
+
+// Tab completion is most programs will preseve the normal syntax
+// and keep your history legible
 
 // DEV: This intro is a little bit long, we only have 20-25 minutes
 
@@ -64,7 +70,15 @@ $ git commit -m "Added hello.txt"
 // TODO: Definitely record this via tee
 
 /*
+mkdir hai-node-summit
+cd hai-node-summit
+git init
 
+# First tool!
+hub create
+
+# Second tool!
+grunt-init node
 */
 
 // At the end, print EOF.
