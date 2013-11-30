@@ -63,6 +63,12 @@ $ git commit -m "Added hello.txt"
 
 // Today, we will walk through how I create, maintain, and release repos.
 
+// TODO: Should we present a top level run through?
+// Background -> Create a repo -> Write some code
+// -> Write some tests (watch) -> Release
+// Optional: Maintenance iteration (livereload)
+// Optional: Preventing regressions (perceptual diffs)
+
 // ## NEXT SLIDE
 
 // First, creating a repo.
