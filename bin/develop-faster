@@ -1,2 +1,18 @@
 #!/usr/bin/env node
 
+// TODO: develop-faster <reset [--slide X] | next | back>
+// TODO: State will be managed by global environment variable or ~/.develop-faster-state?
+// TODO: Maybe leveldb?
+
+// Start with title slide
+/*
+
+# DEVELOP FASTER
+
+Todd Wolfson
+
+Engineer, Uber
+
+github/twolfson -- @twolfson -- http://twolfson.com/
+
+*/
