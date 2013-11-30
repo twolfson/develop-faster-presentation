@@ -81,4 +81,7 @@ hub create
 grunt-init node
 */
 
+// TODO: If internet sucks, show GIF
+// TODO: Prepare a damn GIF (I think we have leftover for this one)
+
 // At the end, print EOF.
