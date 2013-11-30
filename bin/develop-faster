@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// TODO: develop-faster <reset [--slide X] | next | back>
+// TODO: develop-faster <reset [--slide X] | next | back | [same]>
 // TODO: State will be managed by global environment variable or ~/.develop-faster-state?
 // TODO: Maybe leveldb?
 
@@ -9,11 +9,38 @@
 
 # DEVELOP FASTER
 
-Todd Wolfson, Engineer, Uber
+Todd Wolfson
+
+Engineer, Uber
 
 github/twolfson -- @twolfson -- http://twolfson.com/
 
 */
+
+// ## NEXT SLIDE
+
+// TODO: Figure out graphic here... Maybe colored block quote
+// although that would be premature for half of the slide
+// Maybe put up
+/*
+```
+$ gco dev/hai
+$ e "Hello World!" > hello.txt
+$ gm "Added hello.txt"
+```
+*/
+
+// Then switch to another slide
+
+/*
+```
+$ git checkout dev/hai
+$ echo "Hello World!" > hello.txt
+$ git commit -m "Added hello.txt"
+```
+*/
+
+// DEV: This intro is a little bit long, we only have 20-25 minutes
 
 // As the title suggests, today we are going to be talking about developing faster.
 
@@ -25,4 +52,19 @@ github/twolfson -- @twolfson -- http://twolfson.com/
 
 // TODO: Make comment about gender equality of that quote
 
-//
+// So, I am the owner/maintainer of over 150 open source repos. The most
+// recognizable one is spritesmith with over 200 stars.
+
+// Today, we will walk through how I create, maintain, and release repos.
+
+// ## NEXT SLIDE
+
+// First, creating a repo.
+
+// TODO: Definitely record this via tee
+
+/*
+
+*/
+
+// At the end, print EOF.
