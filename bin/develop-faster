@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// TODO: In theory, this entire bin script can become its own node module
 // Set up CLI options
 var program = require('commander')
                 .version(require('../package.json').version);
