@@ -4,36 +4,37 @@
 var program = require('commander')
                 .version(require('../package.json').version);
 
-function goToStep(step, argv) {
-  // TODO: Get step
+function goToSlide(slide, argv) {
+  // TODO: Get slide
   // TODO: Make sure it is over 0 and under length
-  // Load up step
-  // TODO: Consider outputting step 3/10
+  // Load up slide
+  // TODO: Consider outputting slide 3/10
   // Save new state
   console.log(this, arguments);
 }
 program
-  .command('step <step>')
-  .description('Jump to a specific step')
-  .action(goToStep);
+  .command('slide <slide>')
+  .description('Jump to a specific slide')
+  .action(goToslide);
 
 program
   .command('first')
   .description('Go back to the beginning')
   .action(function () {
-    goToStep(0);
+    goToSlide(0);
   });
 
 program
   .command('last')
-  .description('Jump to the final step')
+  .description('Jump to the final slide')
   .action(function () {
-    goToStep(0);
+    // TODO: Grab all slides and move to the last one
+    // goToSlide(0);
   });
 
 program
   .command('next')
-  .description('Move following by one step')
+  .description('Move following by one slide')
   .action(function () {
     // TODO: Grab state
     // TODO: Maybe manage state via a class with a namespace for this path?
@@ -42,7 +43,7 @@ program
 
 program
   .command('back')
-  .description('Move to the previous step')
+  .description('Move to the previous slide')
   .action(function () {
     // TODO: Follow similar approach as `next`
   });
@@ -55,6 +56,6 @@ program
 
 // Proposed structure:
 
-// bin will manage state and determine step to load
-// lib will have export that loads a specific step
-// lib/steps will contain each step
+// bin will manage state and determine slide to load
+// lib will have export that loads a specific slide
+// lib/slides will contain each slide
