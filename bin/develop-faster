@@ -18,10 +18,10 @@ var program = require('commander')
 // TODO: This should sniff for `presentation/config.{yml,json,js}`, `config.{yml,json,js}`
 // TODO: Easily done via `require` but the `fs.existsSync` is excess I don't want to deal with right now
 // TODO: Allow override via `--config`
-var yaml = require('yaml');
+var yaml = require('js-yaml');
 var config = require('../presentation/config.yml');
 var Presentation = require('../');
-var presentation = new Presentation(config, {cwd: __dirname + '../presentation'});
+var presentation = new Presentation(config, {cwd: __dirname + '/../presentation'});
 
 // Define common slide jumping function
 function goToSlide(_slide, argv) {
@@ -51,12 +51,12 @@ function goToSlide(_slide, argv) {
       slide = parseInt(_slide, 10);
       assert(!isNaN(slide), 'Slide "' + _slide + '" parsed to NaN');
       slide = Math.max(0, slide);
-      slide = Math.min(slide, 10);
+      slide = Math.min(slide, presentation.length);
       cb();
     },
     function loadSlide (cb) {
-      // TODO: Stop doing this
-      var slideJs = require('../lib/slides/title.js');
+      // Load and run the slide
+      var slideJs = presentation.getSlide(slide);
       slideJs();
     },
     function saveState (cb) {
