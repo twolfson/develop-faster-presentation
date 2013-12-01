@@ -5,6 +5,7 @@
 // lib will have export that loads a specific slide
 // presentation contains slides and ordering info
 
+// TODO: Can we get some tab completion for this?
 // TODO: Convert `bin + lib` into a node module
 
 // Create a leveldb instance

@@ -153,7 +153,7 @@ describe('A calculator', function () {
 
 // Go into optional content
 
-// Make sure twolfson.com has up-to-date perceptual diffs
+// TODO: Make sure twolfson.com has up-to-date perceptual diffs
 
 // Optional: livereload twolfson.com
 // Update some content
