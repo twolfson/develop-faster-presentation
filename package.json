@@ -37,7 +37,8 @@
     "wordwrap": "0.0.2",
     "center-text": "~0.1.0",
     "colors": "~0.6.2",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "yaml": "~0.2.3"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

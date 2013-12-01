@@ -14,6 +14,15 @@ var async = require('async');
 var program = require('commander')
                 .version(require('../package.json').version);
 
+// Load in presentation info
+// TODO: This should sniff for `presentation/config.{yml,json,js}`, `config.{yml,json,js}`
+// TODO: Easily done via `require` but the `fs.existsSync` is excess I don't want to deal with right now
+// TODO: Allow override via `--config`
+var yaml = require('yaml');
+var config = require('../presentation/config.yml');
+var Presentation = require('../');
+var presentation = new Presentation(config, {cwd: __dirname + '../presentation'});
+
 // Define common slide jumping function
 function goToSlide(_slide, argv) {
   // TODO: Load slides
