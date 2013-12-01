@@ -4,6 +4,8 @@
 // TODO: State will be managed by global environment variable or ~/.develop-faster-state?
 // TODO: Maybe leveldb?
 
+// TODO: Fix `git push --set-upstream origin master` on `git-release`
+
 // Start with title slide
 /*
 
