@@ -4,18 +4,24 @@
 var program = require('commander')
                 .version(require('../package.json').version);
 
+// Define common slide jumping function
 function goToSlide(slide, argv) {
   // TODO: Get slide
   // TODO: Make sure it is over 0 and under length
   // Load up slide
   // TODO: Consider outputting slide 3/10
   // Save new state
+
+  process.env.HAI = '1';
+
   console.log(this, arguments);
 }
+
+// Define CLI commands
 program
   .command('slide <slide>')
   .description('Jump to a specific slide')
-  .action(goToslide);
+  .action(goToSlide);
 
 program
   .command('first')
