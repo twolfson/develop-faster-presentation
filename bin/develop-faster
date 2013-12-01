@@ -21,14 +21,18 @@ function goToSlide(_slide, argv) {
   slide = Math.max(0, slide);
   // TODO: Get slides.length
   slide = Math.min(slide, 10);
-  // Load up slide
+  // TODO: Load up slide
   // TODO: Consider outputting slide 3/10
-  // Save new state
+  // TODO: Maybe that is `status` command
+  // TODO: Save new state
 
-  // console.log(this, arguments);
+  // TODO: Stop doing this
+  var slideJs = require('../lib/slides/title.js');
+  // slideJs();
 }
 
 // Define CLI commands
+// TODO: Consider command `slides` which reads json-content-demuxed info for each slide
 program
   .command('slide <slide>')
   .description('Jump to a specific slide')

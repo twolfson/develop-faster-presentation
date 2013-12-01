@@ -32,7 +32,8 @@
     "test": "echo 'No tests =(' && exit 1"
   },
   "dependencies": {
-    "commander": "~2.1.0"
+    "commander": "~2.1.0",
+    "figlet-js": "git://github.com/olizilla/figlet-js"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
