@@ -35,7 +35,8 @@
     "commander": "~2.1.0",
     "figlet-js": "git://github.com/olizilla/figlet-js",
     "wordwrap": "0.0.2",
-    "center-text": "~0.1.0"
+    "center-text": "~0.1.0",
+    "colors": "~0.6.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
