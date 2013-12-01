@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
-// TODO: In theory, this entire bin script can become its own node module
+// Structure:
+// bin will manage state and determine slide to load
+// lib will have export that loads a specific slide
+// presentation contains slides and ordering info
+
+// TODO: Convert `bin + lib` into a node module
 
 // Create a leveldb instance
 var fs = require('fs');
@@ -23,6 +28,19 @@ var config = require('../presentation/config.yml');
 var Presentation = require('../');
 var presentation = new Presentation(config, {cwd: __dirname + '/../presentation'});
 
+// Define a slide information retrieval helper
+function getCurrentSlide(cb) {
+  db.get('slide', function (err, val) {
+    // If this is the first run, return -1
+    if (err && err.notFound) {
+      cb(null, -1);
+    } else {
+    // Otherwise, callback with the slide
+      cb(err, val);
+    }
+  });
+}
+
 // Define common slide jumping function
 function goToSlide(_slide, argv) {
   // TODO: Load slides
@@ -31,16 +49,10 @@ function goToSlide(_slide, argv) {
     function fallbackSlide (cb) {
       // Fallback slide to active one
       if (_slide === undefined) {
-        db.get('slide', function (err, val) {
-          // If this is the first run, show the first slide
-          if (err && err.notFound) {
-            _slide = 0;
-            cb();
-          } else {
-          // Otherwise, save the info and callback
-            _slide = val || 0;
-            cb(err);
-          }
+        getCurrentSlide(function (err, val) {
+          // Save the info and callback
+          _slide = val || 0;
+          cb(err);
         });
       } else {
         cb();
@@ -58,12 +70,13 @@ function goToSlide(_slide, argv) {
       // Load and run the slide
       var slideJs = presentation.getSlide(slide);
       slideJs();
+      cb();
     },
     function saveState (cb) {
       // Save the slide state
-      db.set('slide', slide, cb);
+      db.put('slide', slide, cb);
     }
-  ], function (err) {
+  ], function handleErrors (err) {
     // If there was an error, throw it
     if (err) {
       throw err;
@@ -72,11 +85,9 @@ function goToSlide(_slide, argv) {
 }
 
 // TODO: Consider a `status` command which outputs current slide
-
-// TODO: Definitely display same slide when no command is provided
+// TODO: Consider command `slides` which reads json-content-demuxed info for each slide
 
 // Define CLI commands
-// TODO: Consider command `slides` which reads json-content-demuxed info for each slide
 program
   .command('slide <slide>')
   .description('Jump to a specific slide')
@@ -93,8 +104,7 @@ program
   .command('last')
   .description('Jump to the final slide')
   .action(function () {
-    // TODO: Grab all slides and move to the last one
-    // goToSlide(0);
+    goToSlide(presentation.length - 1);
   });
 
 program
@@ -102,15 +112,20 @@ program
   .description('Move following by one slide')
   .action(function () {
     // TODO: Grab state
-    // TODO: Maybe manage state via a class with a namespace for this path?
-    // TODO: Or that leveldb magic...
+    getCurrentSlide(function (err, val) {
+      if (err) { throw err; }
+      // -1 -> 0. 0 -> 1
+      goToSlide(val + 1);
+    });
   });
 
 program
   .command('back')
   .description('Move to the previous slide')
   .action(function () {
-    // TODO: Follow similar approach as `next`
+      if (err) { throw err; }
+      // 0 -> -1 (max -> 0). 1 -> 0
+      goToSlide(val - 1);
   });
 
 // Parse the arguments
@@ -120,15 +135,3 @@ program.parse(process.argv);
 if (process.argv.length === 2) {
   goToSlide();
 }
-
-// TODO: State will be managed by global environment variable or ~/.develop-faster-state?
-// TODO: Maybe leveldb?
-
-// TODO: Fix `git push --set-upstream origin master` on `git-release`
-
-
-// Proposed structure:
-
-// bin will manage state and determine slide to load
-// lib will have export that loads a specific slide
-// lib/slides will contain each slide
