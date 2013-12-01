@@ -11,10 +11,10 @@ function goToSlide(slide, argv) {
   // Load up slide
   // TODO: Consider outputting slide 3/10
   // Save new state
-
+  console.log(process.env.HAI);
   process.env.HAI = '1';
 
-  console.log(this, arguments);
+  // console.log(this, arguments);
 }
 
 // Define CLI commands
@@ -53,6 +53,9 @@ program
   .action(function () {
     // TODO: Follow similar approach as `next`
   });
+
+// Parse the arguments
+program.parse(process.argv);
 
 // TODO: State will be managed by global environment variable or ~/.develop-faster-state?
 // TODO: Maybe leveldb?
