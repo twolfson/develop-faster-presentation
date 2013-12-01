@@ -28,8 +28,10 @@ function goToSlide(_slide, argv) {
 
   // TODO: Stop doing this
   var slideJs = require('../lib/slides/title.js');
-  // slideJs();
+  slideJs();
 }
+
+// TODO: Definitely display same slide when no command is provided
 
 // Define CLI commands
 // TODO: Consider command `slides` which reads json-content-demuxed info for each slide
