@@ -1,19 +1,29 @@
 #!/usr/bin/env node
 
 // TODO: In theory, this entire bin script can become its own node module
+
+// Create a leveldb instance
+var fs = require('fs');
+var levelup = require('levelup');
+try { fs.mkdirSync(__dirname + '/../tmp'); } catch (e) {}
+var db = levelup(__dirname + '/../tmp/develop-faster.db');
+
 // Set up CLI options
+var assert = require('assert');
 var program = require('commander')
                 .version(require('../package.json').version);
 
 // Define common slide jumping function
-function goToSlide(slide, argv) {
-  // TODO: Get slide
-  // TODO: Make sure it is over 0 and under length
+function goToSlide(_slide, argv) {
+  // Parse the slide and guarantee it is within our bounds
+  slide = parseInt(_slide, 10);
+  assert(!isNaN(slide), 'Slide "' + _slide + '" parsed to NaN');
+  slide = Math.max(0, slide);
+  // TODO: Get slides.length
+  slide = Math.min(slide, 10);
   // Load up slide
   // TODO: Consider outputting slide 3/10
   // Save new state
-  console.log(process.env.HAI);
-  process.env.HAI = '1';
 
   // console.log(this, arguments);
 }
