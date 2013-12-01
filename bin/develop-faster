@@ -23,12 +23,15 @@ function goToSlide(_slide, argv) {
       // Fallback slide to active one
       if (_slide === undefined) {
         db.get('slide', function (err, val) {
-          console.log(arguments);
-          if (err) {
-
+          // If this is the first run, show the first slide
+          if (err && err.notFound) {
+            _slide = 0;
+            cb();
+          } else {
+          // Otherwise, save the info and callback
+            _slide = val || 0;
+            cb(err);
           }
-          _slide = val || 0;
-          cb(err);
         });
       } else {
         cb();
