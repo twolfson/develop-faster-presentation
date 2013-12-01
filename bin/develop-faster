@@ -68,6 +68,7 @@ $ git commit -m "Added hello.txt"
 // -> Write some tests (watch) -> Release
 // Optional: Maintenance iteration (livereload)
 // Optional: Preventing regressions (perceptual diffs)
+// Optional: git autohelp (you must trust your workflow first)
 
 // ## NEXT SLIDE
 
@@ -139,5 +140,39 @@ describe('A calculator', function () {
   });
 });
 */
+
+// ## NEXT STEP
+
+// Now we release.
+
+// Edit the change log
+
+// Initial release. Added Calculator and tests.
+
+// git add -A
+
+// git commit -m "Updated CHANGELOG"
+
+// git release 0.1.0  # tags release, publishes to npm, pushes commits to GitHub, pushes tags to GitHub
+
+// Talk about generalization of release system; used for Python, Sublime Text, bower, and component
+
+// Go into optional content
+
+// Make sure twolfson.com has up-to-date perceptual diffs
+
+// Optional: livereload twolfson.com
+// Update some content
+// Perceptual diff
+// Preventing regressions before they even happen
+
+// ## CLOSING
+
+// TODO: A note somewhere about
+// "A developer who can make its own tools is only limited by its own imagination."
+
+// or in the words of Willy Wonka
+// "Anything you want to, do it"
+// "Want to change the world, there's nothing to it"
 
 // At the end, print EOF.
