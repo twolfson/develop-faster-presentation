@@ -15,4 +15,7 @@ module.exports = function () {
   console.log('');
   console.log('grunt-init node');
   console.log('');
+
+  // Place some vertical padding
+  console.log('');
 };

@@ -11,4 +11,7 @@ module.exports = function () {
   console.log('');
   console.log('git release 0.1.0');
   console.log('');
+
+  // Place some vertical padding
+  console.log('');
 };
