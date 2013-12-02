@@ -5,6 +5,13 @@ var functionToString = require('function-to-string');
 module.exports = function () {
   console.log(center('Write some tests'.underline));
 
+  console.log('');
+  console.log('# Run this:');
+  console.log('nodemon -x "npm test"');
+  console.log('');
+  console.log('# Test');
+
+
 function code() {
 var assert = require('assert');
 var Calculator = require('../');
@@ -46,8 +53,8 @@ describe('A calculator', function () {
 }
 
   if (process.env.HELP) {
-    console.log(functionToString(codeHelp).body);
+    console.log(functionToString(codeHelp).body.replace('\n', ''));
   } else {
-    console.log(functionToString(code).body);
+    console.log(functionToString(code).body.replace('\n', ''));
   }
 };
