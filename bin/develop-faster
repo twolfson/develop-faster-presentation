@@ -64,14 +64,12 @@ function goToSlide(_slide, argv) {
       slide = parseInt(_slide, 10);
       assert(!isNaN(slide), 'Slide "' + _slide + '" parsed to NaN');
       slide = Math.max(0, slide);
-      console.log(slide, presentation.length);
-      slide = Math.min(slide, presentation.length);
+      slide = Math.min(slide, presentation.length - 1);
       cb();
     },
     function loadSlide (cb) {
       // Load and run the slide
       var slideJs = presentation.getSlide(slide);
-      console.log(slide, slideJs);
       slideJs();
       cb();
     },
