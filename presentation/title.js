@@ -5,6 +5,8 @@ var colors = require('colors');
 module.exports = function () {
   // Figlet fonts can be found here
   // http://www.figlet.org/examples.html
+  // TODO: Write test which asserts all lines are under 80 characters
+  // TODO: Pass in total columns via module.exports fn
   var font = process.stdout.columns >= 104 ? 'speed' : 'smslant';
   Figlet.write('Develop Faster', font, function (err, str) {
     if (err) {
