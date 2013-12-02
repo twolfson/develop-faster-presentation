@@ -37,7 +37,7 @@ function getCurrentSlide(cb) {
       cb(null, -1);
     } else {
     // Otherwise, callback with the slide
-      cb(err, val);
+      cb(err, +val);
     }
   });
 }
@@ -64,6 +64,7 @@ function goToSlide(_slide, argv) {
       slide = parseInt(_slide, 10);
       assert(!isNaN(slide), 'Slide "' + _slide + '" parsed to NaN');
       slide = Math.max(0, slide);
+      console.log(slide, presentation.length);
       slide = Math.min(slide, presentation.length);
       cb();
     },
