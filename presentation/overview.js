@@ -15,7 +15,11 @@ var primary = function () {
 +---------------+    +-----------------+    +------------------+    +---------+
 */
 };
-  console.log(primary.toString().replace('function () {\n/*', '').replace('*/\n}', ''));
+  var primaryStr = primary.toString().replace('function () {\n/*', '').replace('*/\n}', '');
+  primaryStr.split(/\n/g).forEach(function (line) {
+    // Visually center content
+    console.log(center(line).slice(2));
+  });
 
   console.log('');
   console.log(center('If time alots:'));
@@ -31,6 +35,9 @@ var secondary = function () {
 };
   // TODO: Sloppy typing consists of git autohelp and tab completion for all CLI tools
   // TODO: What about YAGNI. We AGNI.
-  console.log(secondary.toString().replace('function () {\n/*', '').replace('*/\n}', ''));
+  var secondaryStr = secondary.toString().replace('function () {\n/*', '').replace('*/\n}', '');
+  secondaryStr.split(/\n/g).forEach(function (line) {
+    console.log(center(line).slice(1));
+  });
 
 };
