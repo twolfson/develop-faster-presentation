@@ -7,6 +7,7 @@ module.exports = function () {
   // TODO: Code up a HELP action
   console.log(center('Create a repo'.underline));
   console.log('');
+  console.log('# Open a new terminal window');
   console.log('mkdir hai-node-summit');
   console.log('cd hai-node-summit');
   console.log('git init');
