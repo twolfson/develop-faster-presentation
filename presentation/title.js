@@ -20,26 +20,22 @@ module.exports = function () {
 
       */
 
-      // Determine how long the first row was
-      var firstRow = str.split('\n')[0];
-      var opts = {
-        columns: firstRow.length
-      };
-
       // Customize font a little bit
-      console.log(str.replace('__,_', '__/_'));
-      console.log(center('(Develop Faster)', opts));
-      console.log(center('', opts));
-      console.log(center('Todd Wolfson, Engineer, Uber', opts));
-      console.log(center('', opts));
+      str.split(/\n/g).forEach(function (line) {
+        console.log(center(line.replace('__,_', '__/_')));
+      });
+      console.log(center('(Develop Faster)'));
+      console.log(center(''));
+      console.log(center('Todd Wolfson, Engineer, Uber'));
+      console.log(center(''));
       console.log(center([
         'github/twolfson'.underline,
         ' -- ',
         '@twolfson'.underline,
         ' -- ',
         'http://twolfson.com/'.underline
-      ].join(''), opts));
-      console.log(center('', opts));
+      ].join('')));
+      console.log(center(''));
     }
   });
 };
