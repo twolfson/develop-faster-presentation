@@ -8,5 +8,6 @@ slides:
   - write-some-code.js
   - write-some-tests.js
   - release.js
+  - optional.js
   - reflection.js
   - title.js
