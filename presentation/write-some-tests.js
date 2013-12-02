@@ -7,7 +7,7 @@ module.exports = function () {
 
   console.log('');
   console.log('# Run this:');
-  console.log('nodemon -x "npm test"');
+  console.log('nodemon -x "npm" test');
   console.log('');
   console.log('# Test');
 
