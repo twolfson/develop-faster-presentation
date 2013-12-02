@@ -4,8 +4,6 @@ var functionToString = require('function-to-string');
 
 module.exports = function () {
   console.log(center('Write some code'.underline));
-  console.log('');
-  console.log('subl .');
 
 function code() {
 function Calculator() {

@@ -13,6 +13,10 @@ module.exports = function () {
   console.log('# Run this:');
   console.log('nodemon -x "npm" test');
   console.log('');
+  console.log('# Alternatives: `mocha --watch`, `listen-spawn`,');
+  console.log('#   `guard` (ruby), `watcher` (go), `entr` (c),');
+  console.log('#   `watchman` (php)');
+  console.log('');
   console.log('# Test');
 
 

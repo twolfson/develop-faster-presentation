@@ -8,6 +8,7 @@ module.exports = function () {
   console.log(center('Create a repo'.underline));
   console.log('');
   console.log('# Open a new terminal window');
+  console.log('cd ~/github');
   console.log('mkdir hai-node-summit');
   console.log('cd hai-node-summit');
   console.log('git init');
@@ -16,6 +17,7 @@ module.exports = function () {
   console.log('');
   console.log('grunt-init node');
   console.log('');
+  console.log('subl .');
 
   // Place some vertical padding
   console.log('');
