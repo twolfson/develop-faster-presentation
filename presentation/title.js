@@ -34,7 +34,7 @@ module.exports = function () {
       console.log(center([
         'github/twolfson'.underline,
         ' -- ',
-        '@twolfson'.underline,
+        '@twolfsn'.underline,
         ' -- ',
         'http://twolfson.com/'.underline
       ].join('')));
