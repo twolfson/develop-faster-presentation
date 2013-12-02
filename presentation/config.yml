@@ -7,3 +7,5 @@ slides:
   - create-a-repo.js
   - write-some-code.js
   - write-some-tests.js
+  - release.js
+  - title.js

@@ -85,9 +85,6 @@ function goToSlide(_slide, argv) {
   });
 }
 
-// TODO: Consider a `status` command which outputs current slide
-// TODO: Consider command `slides` which reads json-content-demuxed info for each slide
-
 // Define CLI commands
 program
   .command('slide <slide>')
@@ -127,6 +124,20 @@ program
       if (err) { throw err; }
       // 0 -> -1 (max -> 0). 1 -> 0
       goToSlide(val - 1);
+    });
+  });
+
+program
+  .command('status')
+  .description('Get overview of slides')
+  .action(function () {
+    getCurrentSlide(function (err, val) {
+      if (err) { throw err; }
+
+      config.slides.forEach(function (name, i) {
+        var active = val === i ? '*' : ' ';
+        console.log(active + ' ' + i + ' ' + name);
+      });
     });
   });
 
