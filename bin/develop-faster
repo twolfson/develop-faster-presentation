@@ -70,6 +70,7 @@ function goToSlide(_slide, argv) {
     function loadSlide (cb) {
       // Load and run the slide
       var slideJs = presentation.getSlide(slide);
+      console.log(slide, slideJs);
       slideJs();
       cb();
     },

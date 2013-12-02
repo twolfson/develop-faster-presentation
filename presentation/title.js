@@ -24,7 +24,9 @@ module.exports = function () {
 
       // TODO: Move to consistent width for all slides based off of title slide width
       // Customize font a little bit
-      console.log(str.replace('__,_', '__/_'));
+      str.split(/\n/g).forEach(function (line) {
+        console.log(center(line.replace('__,_', '__/_')));
+      });
       console.log(center('(Develop Faster)'));
       console.log(center(''));
       console.log(center('Todd Wolfson, Engineer, Uber'));

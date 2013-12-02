@@ -1,4 +1,5 @@
 var center = require('center-text');
+var colors = require('colors');
 
 module.exports = function () {
   console.log(center('Overview'.underline));
