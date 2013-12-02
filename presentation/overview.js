@@ -1,5 +1,10 @@
 var center = require('center-text');
 var colors = require('colors');
+var functionToString = require('function-to-string');
+
+function extractFnComment(fn) {
+  return functionToString(fn).body.replace(/\/\*\s*/, '').replace(/\*\/\s*/, '');
+}
 
 module.exports = function () {
   console.log(center('Overview'.underline));
@@ -16,7 +21,7 @@ var primary = function () {
 +---------------+    +-----------------+    +------------------+    +---------+
 */
 };
-  var primaryStr = primary.toString().replace('function () {\n/*', '').replace('*/\n}', '');
+  var primaryStr = extractFnComment(primary);
   primaryStr.split(/\n/g).forEach(function (line) {
     // Visually center content
     console.log(center(line).slice(2));
@@ -36,9 +41,8 @@ var secondary = function () {
 };
   // TODO: Sloppy typing consists of git autohelp and tab completion for all CLI tools
   // TODO: What about YAGNI. We AGNI.
-  var secondaryStr = secondary.toString().replace('function () {\n/*', '').replace('*/\n}', '');
+  var secondaryStr = extractFnComment(secondary);
   secondaryStr.split(/\n/g).forEach(function (line) {
     console.log(center(line).slice(1));
   });
-
 };
