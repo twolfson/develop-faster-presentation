@@ -13,4 +13,5 @@ module.exports = function () {
   console.log('hub create');
   console.log('');
   console.log('grunt-init node');
+  console.log('');
 };
