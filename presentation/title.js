@@ -5,7 +5,8 @@ var colors = require('colors');
 module.exports = function () {
   // Figlet fonts can be found here
   // http://www.figlet.org/examples.html
-  Figlet.write('Develop Faster', 'speed', function (err, str) {
+  var font = process.stdout.columns >= 104 ? 'speed' : 'smslant';
+  Figlet.write('Develop Faster', font, function (err, str) {
     if (err) {
       throw err;
     } else {

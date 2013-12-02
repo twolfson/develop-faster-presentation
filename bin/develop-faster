@@ -112,7 +112,6 @@ program
   .command('next')
   .description('Move following by one slide')
   .action(function () {
-    // TODO: Grab state
     getCurrentSlide(function (err, val) {
       if (err) { throw err; }
       // -1 -> 0. 0 -> 1
@@ -124,9 +123,11 @@ program
   .command('back')
   .description('Move to the previous slide')
   .action(function () {
+    getCurrentSlide(function (err, val) {
       if (err) { throw err; }
       // 0 -> -1 (max -> 0). 1 -> 0
       goToSlide(val - 1);
+    });
   });
 
 // Parse the arguments
