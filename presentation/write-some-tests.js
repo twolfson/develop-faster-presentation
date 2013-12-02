@@ -56,9 +56,9 @@ describe('A calculator', function () {
 });
 }
 
-  if (process.env.HELP) {
-    console.log(functionToString(codeHelp).body.replace('\n', ''));
-  } else {
+  if (!process.env.HELP) {
     console.log(functionToString(code).body.replace('\n', ''));
+  } else {
+    console.log(functionToString(codeHelp).body.replace('\n', ''));
   }
 };
