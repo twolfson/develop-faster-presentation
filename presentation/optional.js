@@ -17,6 +17,8 @@ module.exports = function () {
   console.log('');
   console.log('pico views/layout.ejs');
   console.log('');
+  console.log('npm run test-perceptual');
+  console.log('');
   console.log('');
   console.log('# Sloppy typing'.underline);
   console.log('git config --global help.autocorrect 7');
