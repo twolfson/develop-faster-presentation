@@ -3,44 +3,42 @@ var colors = require('colors');
 var functionToString = require('function-to-string');
 
 function extractFnComment(fn) {
-  return functionToString(fn).body.replace(/\/\*\s*/, '').replace(/\*\/\s*/, '');
+  return functionToString(fn).body.replace(/\/\*\n*/, '').replace(/\*\/\n*/, '');
 }
 
 module.exports = function () {
   console.log(center('Overview'.underline));
+  console.log('');
 
 // DEV: This was a hack I saw recently but cannot find/recall from where =(
-var primary = function () {
-/*
-+---------------+    +-----------------+    +------------------+    +---------+
-|               |    |                 |    |                  |    |         |
-| Create a repo | -> | Write some code | -> | Write some tests | -> | Release |
-|               |    |                 |    |                  |    |         |
-+---------------+    +-----------------+    +------------------+    +---------+
-*/
-};
+var primary = function () {/*
++---------------+    +-----------------+    +-----------------+
+|               |    |                 |    |                 |
+|               |    | Write some code |    | Write some code |
+| Create a repo | -> |                 | -> |                 |
+|               |    |    (server)     |    |    (browser)    |
+|               |    |                 |    |                 |
++---------------+    +-----------------+    +-----------------+
+*/};
   var primaryStr = extractFnComment(primary);
   primaryStr.split(/\n/g).forEach(function (line) {
     // Visually center content
-    console.log(center(line).slice(2));
+    console.log(center(line));
   });
 
-  console.log('');
-  console.log(center('If time alots:'));
-
-var secondary = function () {
-/*
-+---------------------+    +---------------+
-|                     |    |               |
-| Browser development |    | Sloppy typing |
-|                     |    |               |
-+---------------------+    +---------------+
-*/
-};
+var secondary = function () {/*
+    +----------------+    +--------+    +------------------+    +---------+
+    |                |    |        |    |                  |    |         |
+    |                |    |        |    |                  |    |         |
+ -> | Compile assets | -> | Commit | -> | Write some tests | -> | Release |
+    |                |    |        |    |                  |    |         |
+    |                |    |        |    |                  |    |         |
+    +----------------+    +--------+    +------------------+    +---------+
+*/};
   // TODO: Sloppy typing consists of git autohelp and tab completion for all CLI tools
   // TODO: What about YAGNI. We AGNI.
   var secondaryStr = extractFnComment(secondary);
   secondaryStr.split(/\n/g).forEach(function (line) {
-    console.log(center(line).slice(1));
+    console.log(center(line));
   });
 };
