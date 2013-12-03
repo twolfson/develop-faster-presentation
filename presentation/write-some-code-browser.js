@@ -8,7 +8,7 @@ module.exports = function () {
 
   if (!process.env.HELP) {
     console.log('# Browser development'.underline);
-    console.log('cd ~/github/twolfson.com');
+    console.log('');
     console.log('npm start');
     console.log('livereload  # In separate terminal');
     console.log('');
@@ -16,8 +16,6 @@ module.exports = function () {
     console.log('# Start livereload extension');
     console.log('');
     console.log('pico views/layout.ejs');
-    console.log('');
-    console.log('npm run test-perceptual');
     console.log('');
   } else {
     console.log('cd ~/github/twolfson.com');
