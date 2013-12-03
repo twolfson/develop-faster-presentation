@@ -14,16 +14,24 @@ module.exports = function () {
 
 function code() {
 var assert = require('assert');
-var Calculator = require('../');
+var Server = require('../');
 
 // TODO: Show off perceptual diffs if we have time =)
 
-describe('A calculator', function () {
-  beforeEach(function () {
-    this.calc = new Calculator();
+describe('hai-node-summit', function () {
+  before(function () {
+    this.app = new Server();
+  });
+  after(function (done) {
+    this.app.close(done);
   });
 
-  it('', function () {
+  describe('replying to a request', function () {
+    it.skip('can connect', function () {
+    });
+
+    it.skip('returns "Hello World!"', function () {
+    });
   });
 });
 }
