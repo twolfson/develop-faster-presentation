@@ -9,8 +9,6 @@ function extractFnComment(fn) {
 module.exports = function () {
   console.log(center('Overview'.underline));
 
-// TODO: Figure out centering (should it be consistent with other pages or not?
-// TODO: Maybe limit everyone to 80?
 // DEV: This was a hack I saw recently but cannot find/recall from where =(
 var primary = function () {
 /*
