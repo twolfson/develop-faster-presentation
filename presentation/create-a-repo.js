@@ -2,9 +2,6 @@ var center = require('center-text');
 var colors = require('colors');
 
 module.exports = function () {
-  // TODO: Figure out how to open an image from the CLI (i.e. that demo GIF
-  // TODO: Copy over the demo image
-  // TODO: Code up a HELP action
   console.log(center('Create a repo'.underline));
   console.log('');
   if (!process.env.HELP) {

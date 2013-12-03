@@ -3,10 +3,6 @@ var colors = require('colors');
 var functionToString = require('function-to-string');
 
 module.exports = function () {
-  // TODO: Copy over the gif
-  // TODO: Should we make a new one for here?
-  // TODO: Code up HELP prompt
-
   console.log(center('Write some tests'.underline));
 
   console.log('');
