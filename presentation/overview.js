@@ -35,10 +35,8 @@ var secondary = function () {/*
    |                 |    |        |    |                  |    |         |
    +-----------------+    +--------+    +------------------+    +---------+
 */};
-  // TODO: Sloppy typing consists of git autohelp and tab completion for all CLI tools
-  // TODO: What about YAGNI. We AGNI.
   var secondaryStr = extractFnComment(secondary);
   secondaryStr.split(/\n/g).forEach(function (line) {
-    console.log(center(line));
+    console.log(center(line).slice(1));
   });
 };
