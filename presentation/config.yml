@@ -1,8 +1,5 @@
 slides:
   - title.js
-  # Hesitating on this slide. We need a hook.
-  # - what-we-are-not-doing.js
-  # TODO: Parterning slide of `what-we-are-not-doing-expanded`
   - overview.js
   - create-a-repo.js
   - write-some-code.js
