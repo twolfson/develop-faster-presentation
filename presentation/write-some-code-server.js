@@ -13,7 +13,7 @@ var app = http.createServer(function (req, res) {
 
 var port = 9001;
 app.listen(port);
-conosle.log('Server is listening at http://127.0.0.1:' + port + '/');
+console.log('Server is listening at http://127.0.0.1:' + port + '/');
 }
   console.log(functionToString(code).body);
 };
