@@ -1,4 +1,6 @@
 # develop-faster-presentation changelog
+0.5.0 - Added HELP info and cleanup from demo run
+
 0.4.0 - Completed first draft of all slides
 
 0.3.0 - Completed initial script to load slides
