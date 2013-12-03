@@ -17,7 +17,6 @@ var assert = require('assert');
 var Server = require('../');
 
 // TODO: Show off perceptual diffs if we have time =)
-
 describe('hai-node-summit', function () {
   before(function () {
     this.app = new Server(9002);
@@ -35,25 +34,29 @@ describe('hai-node-summit', function () {
 
 function codeHelp() {
 var assert = require('assert');
-var Calculator = require('../');
+var request = require('request');
+var Server = require('../');
 
-describe('A calculator', function () {
-  beforeEach(function () {
-    this.calc = new Calculator();
+// TODO: Show off perceptual diffs if we have time =)
+describe('hai-node-summit', function () {
+  before(function () {
+    this.app = new Server(9002);
+  });
+  after(function (done) {
+    this.app.close(done);
   });
 
-  it('has a total of 0', function () {
-    assert.strictEqual(this.calc.total, 0);
-  });
-
-  describe('adding 2 and 3', function () {
-    beforeEach(function () {
-      this.calc.add(2);
-      this.calc.add(3);
+  describe('replying to a request', function () {
+    before(function (done) {
+      var that = this;
+      request('http://localhost:9002/', function (err, res, body) {
+        that.body = body;
+        done(err);
+      });
     });
 
-    it('has a total of 5', function () {
-      assert.strictEqual(this.calc.total, 5);
+    it('returns "Hello World!"', function () {
+      assert.strictEqual(this.body, 'Hello World!\n');
     });
   });
 });
