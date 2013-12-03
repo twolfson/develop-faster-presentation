@@ -12,13 +12,13 @@ module.exports = function () {
 
 // DEV: This was a hack I saw recently but cannot find/recall from where =(
 var primary = function () {/*
-+---------------+    +-----------------+    +-----------------+
-|               |    |                 |    |                 |
-|               |    | Write some code |    | Write some code |
-| Create a repo | -> |                 | -> |                 |
-|               |    |    (server)     |    |    (browser)    |
-|               |    |                 |    |                 |
-+---------------+    +-----------------+    +-----------------+
++---------------+    +-----------------+    +----------------+
+|               |    |                 |    |                |
+|               |    | Write some code |    |                |
+| Create a repo | -> |                 | -> | Compile assets |
+|               |    |    (server)     |    |                |
+|               |    |                 |    |                |
++---------------+    +-----------------+    +----------------+
 */};
   var primaryStr = extractFnComment(primary);
   primaryStr.split(/\n/g).forEach(function (line) {
@@ -27,13 +27,13 @@ var primary = function () {/*
   });
 
 var secondary = function () {/*
-    +----------------+    +--------+    +------------------+    +---------+
-    |                |    |        |    |                  |    |         |
-    |                |    |        |    |                  |    |         |
- -> | Compile assets | -> | Commit | -> | Write some tests | -> | Release |
-    |                |    |        |    |                  |    |         |
-    |                |    |        |    |                  |    |         |
-    +----------------+    +--------+    +------------------+    +---------+
+   +-----------------+    +--------+    +------------------+    +---------+
+   |                 |    |        |    |                  |    |         |
+   | Write some code |    |        |    |                  |    |         |
+-> |                 | -> | Commit | -> | Write some tests | -> | Release |
+   |    (browser)    |    |        |    |                  |    |         |
+   |                 |    |        |    |                  |    |         |
+   +-----------------+    +--------+    +------------------+    +---------+
 */};
   // TODO: Sloppy typing consists of git autohelp and tab completion for all CLI tools
   // TODO: What about YAGNI. We AGNI.
