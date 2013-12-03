@@ -3,8 +3,10 @@ slides:
   - overview.js
   - create-a-repo.js
   - write-some-code-server.js
+  - compile-assets.js
+  - write-some-code-browser.js
+  - commit.js
   - write-some-tests.js
   - release.js
-  - optional.js
   - reflection.js
   - title.js

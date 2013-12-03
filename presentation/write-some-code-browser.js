@@ -19,11 +19,6 @@ module.exports = function () {
     console.log('');
     console.log('npm run test-perceptual');
     console.log('');
-    console.log('# Sloppy typing'.underline);
-    console.log('git config --global help.autocorrect 7');
-    console.log('git add -A');
-    console.log('git comit -m "Bad typing ftw"  # Notice the mispelling of `comit`');
-    console.log('');
   } else {
     console.log('cd ~/github/twolfson.com');
     console.log('npm start');

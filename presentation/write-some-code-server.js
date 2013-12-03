@@ -3,7 +3,7 @@ var colors = require('colors');
 var functionToString = require('function-to-string');
 
 module.exports = function () {
-  console.log(center('Write some code'.underline));
+  console.log(center('Write some code (server)'.underline));
 
 function code() {
 var http = require('http');
