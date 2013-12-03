@@ -4,13 +4,13 @@ var functionToString = require('function-to-string');
 
 module.exports = function () {
   console.log(center('Write some tests'.underline));
-
   console.log('');
-  console.log('# Run this:');
+  console.log('# Inside of a terminal');
+  console.log('cd ~/github/hai-node-summit');
+  console.log('lnpm install request --save-dev');
   console.log('mocha --watch');
   console.log('');
-  console.log('# Test');
-
+  console.log('# Inside of test/hai-node-summit_test.js');
 
 function code() {
 var assert = require('assert');
@@ -20,16 +20,13 @@ var Server = require('../');
 
 describe('hai-node-summit', function () {
   before(function () {
-    this.app = new Server();
+    this.app = new Server(9002);
   });
   after(function (done) {
     this.app.close(done);
   });
 
   describe('replying to a request', function () {
-    it.skip('can connect', function () {
-    });
-
     it.skip('returns "Hello World!"', function () {
     });
   });

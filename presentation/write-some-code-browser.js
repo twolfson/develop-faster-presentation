@@ -3,12 +3,10 @@ var colors = require('colors');
 var functionToString = require('function-to-string');
 
 module.exports = function () {
-  console.log(center('Optional'.underline));
+  console.log(center('Write some code (browser)'.underline));
   console.log('');
 
   if (!process.env.HELP) {
-    console.log('# Browser development'.underline);
-    console.log('');
     console.log('npm start');
     console.log('livereload  # In separate terminal');
     console.log('');
