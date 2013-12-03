@@ -2,7 +2,7 @@ slides:
   - title.js
   - overview.js
   - create-a-repo.js
-  - write-some-code.js
+  - write-some-code-server.js
   - write-some-tests.js
   - release.js
   - optional.js

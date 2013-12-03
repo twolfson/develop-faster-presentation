@@ -6,15 +6,14 @@ module.exports = function () {
   console.log(center('Write some code'.underline));
 
 function code() {
-function Calculator() {
-  this.total = 0;
-}
-Calculator.prototype = {
-  add: function (num) {
-    this.total += num;
-  }
-};
-module.exports = Calculator;
+var http = require('http');
+var app = http.createServer(function (req, res) {
+  res.end('Hello World!');
+});
+
+var port = 9001;
+app.listen(port);
+conosle.log('Server is listening at http://127.0.0.1:' + port + '/');
 }
   console.log(functionToString(code).body);
 };
