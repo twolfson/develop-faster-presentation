@@ -2,7 +2,7 @@
   "name": "develop-faster-presentation",
   "description": "Presentation on removing the tedium from creating, developing, and publishing repos.",
   "version": "0.6.0",
-  "homepage": "",
+  "homepage": "https://github.com/twolfson/develop-faster-presentation",
   "author": {
     "name": "Todd Wolfson",
     "email": "todd@twolfson.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://bitbucket.org/twolfson/develop-faster-presentation.git"
+    "url": "git://github.com/twolfson/develop-faster-presentation.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/twolfson/develop-faster-presentation/issues"
   },
   "licenses": [
     {
       "type": "UNLICENSE",
-      "url": "/blob/master/UNLICENSE"
+      "url": "https://github.com/twolfson/develop-faster-presentation/blob/master/UNLICENSE"
     }
   ],
   "bin": {
