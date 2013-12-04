@@ -1,4 +1,6 @@
 # develop-faster-presentation changelog
+0.6.1 - Moved to GitHub and filled out README
+
 0.6.0 - Added a bunch of new slides and changed ordering
 
 0.5.0 - Added HELP info and cleanup from demo run
