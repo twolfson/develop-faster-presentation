@@ -42,13 +42,15 @@ $ develop-faster --help
     first                  Go back to the beginning
     last                   Jump to the final slide
     next                   Move following by one slide
-    back                   Move to the previous slide
+    previous               Move back by one slide
+    back                   Alias for previous
     status                 Get overview of slides
 
   Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
+    -h, --help             output usage information
+    -c, --config <config>  Path to configuration file (accepts .js, .json, .yml)
+    -V, --version          output the version number
 ```
 
 ### Slides
