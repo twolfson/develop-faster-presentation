@@ -59,7 +59,7 @@ Slide order is configured via `presentation/config.yml`.
 Slides are `presentation/*js` and will output content directly to `console.log`/`process.stdout`.
 
 ### Framework
-`bin/develop-faster` extends upon [`cli-presentaton`][], a framework for giving terminal-based presentations.
+`bin/develop-faster` extends upon [`cli-presentation`][], a framework for giving terminal-based presentations.
 
 It was built after the initial release of `develop-faster-presentation`.
 
