@@ -58,10 +58,12 @@ Slide order is configured via `presentation/config.yml`.
 
 Slides are `presentation/*js` and will output content directly to `console.log`/`process.stdout`.
 
-Under the hood, state is managed via `leveldb`.
-
 ### Framework
-There is no framework here but there are plans to break out the presentation script framework into a node module.
+`bin/develop-faster` extends upon [`cli-presentaton`][], a framework for giving terminal-based presentations.
+
+It was built after the initial release of `develop-faster-presentation`.
+
+[`cli-presentation`]: https://github.com/twolfson/cli-presentation
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt).
